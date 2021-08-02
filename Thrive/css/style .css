@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+.startScreen{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.98);
+    /*display: flex;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    background-size: cover;
+}
+.choosePlayerScreen{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    background-size: cover;
+}
+.fightScreen{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    background-size: cover;
+}
+.Arena1Screen{
+    min-height: 100vh;
+    min-width: 100vh;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-size: cover;
+}
+.text{
+    position: absolute;
+    height: 99%;
+    width: 38%;
+    font-size: 28px;
+    font-family: 'Permanent Marker', cursive;
+    color:#701212;
+}
+.text_s1{
+    position: absolute;
+    height: 60%;
+    width: 20%;
+    font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
+    color:#701212;
+    text-align: center;
+}
+.text_s2{
+    position: absolute;
+    height: 15%;
+    width: 20%;
+    font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
+    color:#701212;
+    text-align: center;
+}
+.container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.card{
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    background-color: rgb(0, 0, 0,0.6);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2),0 0px 50px rgba(0, 0, 0, 0.2);
+}
+.character{
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background{
+    width: 30rem;
+    height: 25rem;
+    position: absolute;
+    z-index: -1;
+}
+.background img{
+    width: 30rem;
+    z-index: 1;
+    transition: all 0.75s ease-out;
+}
+.image img{
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+.name{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3.5rem;
+    transition: all 0.75s ease-out;
+    color: rgb(97, 20, 87);
+    text-align: center;
+}
+.description{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 1.5rem;
+    padding: 2rem 0 rem;
+    text-align: center;
+    color: #919191;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+.submit{
+    margin-top: 5rem;
+}
+.submit button{
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #701212;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.75s ease-out;
+}
+
+.container2{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.card2 {
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2),0 0px 50px rgba(0, 0, 0, 0.2);
+}
+.character2{
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background2{
+    width: 30rem;
+    height: 27rem;
+    position: absolute;
+    z-index: -1;
+}
+.background2 img{
+    width: 30rem;
+    z-index: 1;
+    transition: all 0.75s ease-out;
+}
+.image2 img{
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+.name2{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3.5rem;
+    transition: all 0.75s ease-out;
+    color: rgb(124, 124, 124);
+    text-align: center;
+}
+#logo{
+    position: absolute;
+    top: 28%;
+    left: 38%;
+    transform: scale(1.5);
+    animation: fill 1s ease forwards 3.5s;
+}
+#logo path:nth-child(1){
+    stroke-dasharray: 380.45;
+    stroke-dashoffset: 380.45;
+    animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 579.234;
+    stroke-dashoffset: 579.234;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 546.7;
+    stroke-dashoffset: 546.7;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+#logo path:nth-child(4){
+    stroke-dasharray: 264;
+    stroke-dashoffset: 264;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 487;
+    stroke-dashoffset: 487;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+#logo path:nth-child(6){
+    stroke-dasharray: 478;
+    stroke-dashoffset: 478;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill{
+    from {
+        fill: transparent;
+    }
+    to{
+        fill:black;
+    }
+}
+.button{
+    font-family: 'Acme', sans-serif;
+    margin-top: 200px;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #701212;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-size: 70px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg,transparent,#701212);
+}
+a span:nth-child(2){
+    
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#701212);
+}
+a span:nth-child(3){
+    bottom:0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg,transparent,#701212);
+}
+a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+a span:nth-child(4){
+    
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#701212);
+}
+b{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #ccc018;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-size: 70px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+b span{
+    position: absolute;
+    display: block;
+}
+b span:nth-child(1){
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg,transparent,#ccc018);
+}
+b span:nth-child(2){
+    
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#ccc018);
+}
+b span:nth-child(3){
+    bottom:0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg,transparent,#ccc018);
+}
+b:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+b span:nth-child(4){
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#ccc018);
+}

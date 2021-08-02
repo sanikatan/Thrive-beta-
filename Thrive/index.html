@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href= "./css/style .css">
+</head>
+<body>
+    <audio loop id = "background_music">
+        <source src = "audio/main_music.mp3" type = "audio/mpeg">
+    </audio>
+    <audio loop id = "win_music">
+        <source src = "audio/win_music_2.mp3" type = "audio/mpeg">
+    </audio>
+    <audio id = "ufc1">
+        <source src = "audio/ufc1.mp3" type = "audio/mpeg">
+    </audio>
+    <audio id = "ufc2">
+        <source src = "audio/ufc2.mp3" type = "audio/mpeg">
+    </audio>
+    <audio id = "fight_music">
+        <source src = "audio/fight.mp3" type = "audio/mpeg">
+    </audio>
+
+    <div id="startScreen" class="startScreen" style="background-image: url('pictures/start_background.gif');">
+        <div class="logo">
+            <svg id="logo" width="499" height="114" viewBox="0 0 499 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 19.36L1.76 0.959999H77.76L76 19.36L48.16 16.96L47.52 69.76L49.44 111.36H27.04L28.96 72.48L28.32 17.12L0 19.36Z" stroke="white" stroke-width="6"/>
+                <path d="M175.413 0.16L173.173 69.76L175.092 111.36H152.693L154.613 72.48L154.292 64H111.253L111.092 69.76L113.013 111.36H90.6125L92.5325 72.48L90.6125 4.16L113.333 0.16L111.732 47.04H153.812L152.693 4.16L175.413 0.16Z" stroke="white" stroke-width="6"/>
+                <path d="M229.721 68.8H220.601V69.76L222.521 111.36H201.081L203.001 72.48L201.081 0.959999H235.801C246.041 0.959999 254.201 3.73334 260.281 9.28001C266.361 14.8267 269.401 22.1867 269.401 31.36C269.401 38.2933 267.588 44.64 263.961 50.4C260.441 56.0533 255.641 60.5333 249.561 63.84L277.401 103.2L258.041 113.12L233.081 68.64C232.335 68.7467 231.215 68.8 229.721 68.8ZM230.041 17.12H222.201L221.081 53.28H231.961C237.295 53.28 241.401 51.52 244.281 48C247.268 44.48 248.761 39.4667 248.761 32.96C248.761 22.4 242.521 17.12 230.041 17.12Z" stroke="white" stroke-width="6"/>
+                <path d="M316.457 0.16L314.217 69.76L316.138 111.36H293.737L295.658 72.48L293.737 4.16L316.457 0.16Z" stroke="white" stroke-width="6"/>
+                <path d="M376.579 91.36H378.499L386.499 63.84L403.299 0L422.659 2.88L403.619 66.4L391.139 110.08L361.539 112.16L350.179 69.44L331.619 4.00001L354.339 0L368.899 61.76L376.579 91.36Z" stroke="white" stroke-width="6"/>
+                <path d="M437.8 111.36L439.72 72.48L437.8 0.959999H497.8L496.04 18.08H460.04L459.08 46.4H491.08L489.32 63.36H458.44L458.28 69.76L459.4 94.4H498.12L496.36 111.36H437.8Z" stroke="white" stroke-width="6"/>
+                </svg>
+        </div>
+        <div id="buttonStart" class="button" style = "display: none;">
+            <a >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                START
+            </a>
+        </div>
+    </div>
+    <div id="choosePlayerScreen" class="choosePlayerScreen" style="background-image: url('pictures/background2_choose_fighter_screen.gif');">
+
+    <div class="text"><h1><u id="CYF">Choose your Fighter Player1:</u></h1></div>
+    <div class="container">
+        <div class="card">
+
+            <div class="character">
+
+                <div class="background">
+                    <img src="./pictures/purple_pain_splatter.png" alt="purple paint splash">
+                </div>
+                <div class="image">
+                <img src="./pictures/Kothûg.png" alt="Krakhorn character"> 
+                </div>
+            </div>
+
+            <div class="info">
+                <h1 class="name">Krakhorn the Fanatical</h1>
+                <h3 class="description">This guy defendet the fort with Noel and slayed 4 fucking captains, ALONE....like wtf, who does that on a Saturday</h3>
+            </div>
+
+            <div class="submit">
+                <button type="button" id="SubmitCharacter1Button">Submit</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="text_s1"><h1 id="Player1Selected"></h1></div>
+    <div class="text_s2"><h1 id="Player2Selected"></h1></div>
+    <div id="buttonFight" style = "margin-top: 30%;color: ccc018"class="button">
+        <b >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            FIGHT
+        </b>
+    </div>
+    
+    <div class="container2">
+        <div class="card2">
+
+            <div class="character2">
+
+                <div class="background2">
+                    <img src="./pictures/grey_pain_splatter.png" alt="grey paint splash">
+                </div>
+                <div class="image2">
+                <img src="./pictures/Murbol.png" alt="Murbol character"> 
+                </div>
+            </div>
+
+            <div class="info">
+                <h1 class="name2">Murbol <br>the Slayer</br></h1>
+                <h3 class="description">Rogue with a lot of DMG</h3>
+            </div>
+
+            <div class="submit">
+                <button type="button" id="SubmitCharacter2Button">Submit</button>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="fightScreen" style="background-image:  url('pictures/fight.png');">
+        <img src = "pictures/fire.gif"></img>
+        <img src = "pictures/fire.gif" style = "margin-left:  35%;"></img>
+    </div>
+    <div class="Arena1Screen" style="background-image:  url('pictures/background_Arena1.gif');">
+        <img id = "player1_HP" src = "" style = "margin-top: 1%;margin-left: 2%;position: absolute;"></img>
+        <img id = "player2_HP" src = "" style = "margin-top: 1%;margin-left:  85%;-webkit-transform: scaleX(-1);transform: scaleX(-1);position: absolute;"></img>
+        <button style ="position: absolute;width: 215.2px;height: 60px;display: none; margin-top: 35%;margin-left: 45%;" id="button_restart" type ="button" onclick='restart()'>
+            <img src = "" id = "button_restart_img"></img>
+        </button>   
+        <canvas height = "1053px" width="2120px" id = "gamebox" style = "border: solid 0px white;"></canvas>
+
+         
+
+    </div>
+</body>
+    <script src="./js/javascript.js"></script>
+    <script src="./js/animation_logo.js"></script> <!--Don't realy need it anymore-skalkulira mi je samo ove dolžine od logoja-->
+    <script src="./js/animation_choose_your_fighter.js"></script>
+</html>
